@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulMinds - 24/7 Thought Generation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2980b9;
+            padding: 1em 0;
+            margin-top: 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        section {
+            padding: 2em;
+            margin-top: 1em;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #2980b9;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        #thought-container {
+            margin-top: 1em;
+        }
+
+        #thought-button {
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #thought-result {
+            margin-top: 1em;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MindfulMinds</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="game.html">Play Game</a>
+        <a href="help.html">Get Help</a>
+        <a href="linkedin/about">LinkedIn</a>
+    </nav>
+
+    <section>
+        <h2>24/7 Thought Generation Experience</h2>
+        <p>Explore the power of thoughts with MindfulMinds. Click below to generate a new thought:</p>
+        <button id="thought-button" onclick="generateThought()">Generate Thought</button>
+        <div id="thought-container">
+            <p id="thought-result"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MindfulMinds. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Generate thought functionality
+        function generateThought() {
+            const thoughts = [
+                "Embrace the present moment.",
+                "Every challenge is an opportunity for growth.",
+                "Kindness is the language that the deaf can hear and the blind can see.",
+                "Your potential is endless.",
+                "Life is a journey, not a destination.",
+                "The only limit to our realization of tomorrow will be our doubts of today.",
+                // Add more thoughts here...
+            ];
+
+            const randomThought = thoughts[Math.floor(Math.random() * thoughts.length)];
+            document.getElementById('thought-result').textContent = randomThought;
+        }
+    </script>
+</body>
+
+</html>
